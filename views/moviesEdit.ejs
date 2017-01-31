@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit <%=movie.title%></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Edit <%=movie.title%>!</h1>
+    <form action="<%= '/movies/' + movie.id + '?_method=PUT'%>" method="POST">
+      <div>
+        <label>
+          Title
+          <input type="text" name="title" value="<%=movie.title%>" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Synopsis
+          <input type="text" name="synopsis" value="<%=movie.synopsis%>" />
+        </label>
+      </div>
+
+      <a href="/">Cancel</a>
+      <input type="submit" value="Done Editing" />
+    </form>
+  </body>
+</html>

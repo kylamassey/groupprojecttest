@@ -11,7 +11,9 @@ var movies = require('./routes/movies');
 
 var app = express();
 require('dotenv').config();
+var methodOverride=require('method-override');
 
+app.use(methodOverride('_method'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

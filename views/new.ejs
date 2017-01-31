@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KST Movies - Add New Movie</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Add a Movie!</h1>
+    <form action="/movies" method="POST">
+      <div>
+        <label>
+          Title
+          <input type="text" name="title" />
+        </label>
+      </div>
+      <div>
+        <label>
+          About
+          <input type="text" name="synopsis" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Director
+          <input type="text" name="director" />
+        </label>
+      </div>
+
+
+      <a href="/movies">Cancel</a>
+      <input type="submit" value="Add a movie" />
+    </form>
+  </body>
+</html>
