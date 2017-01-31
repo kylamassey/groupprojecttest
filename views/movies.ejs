@@ -8,11 +8,11 @@
     <h1>Welcome to <%= title %></h1>
 
     <div class="">
+     <% movies.forEach(function(movies) { %>
       <ul>
-      <% movies.forEach(function(movies) { %>
-        <li class="blz"> <a href="/movies/<%=movies.id%>"<%= movies.title %></a></li>
-      <% }) %>
+        <li class="blz"> <a href="/movies/<%=movies.id%>"><%= movies.title %></a> </li>
       </ul>
+       <% }) %>
     </div>
   </body>
 </html>
