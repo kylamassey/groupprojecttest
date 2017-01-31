@@ -17,6 +17,16 @@ router.get('/new', function(req, res, next) {
   res.render('new');
 });
 
+router.post('/', function(req, res, next) {
+  models.Movie.create({
+    title: req.body.title,
+    synopsis: req.body.synopsis,
+  }).then(function() {
+    res.redirect('/movies')
+  });
+});
+
+
 // creates route to movies/id# that renders movie titles and synopsis based on whichever movie id was requested
 router.get('/:id', function(req, res, next) {
   models.Movie.findById(req.params.id).then(function(movies) {
@@ -37,7 +47,7 @@ router.get('/:id/edit', function(req, res, next) {
   });
 });
 
-
+// posts edited movie info submitted (updates) don't forget method override
 router.put('/:id', function(req, res, next) {
   models.Movie.update({
     title: req.body.title,
