@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var models = require('../db/models/index');
+var models = require('../db/models/director');
 
 /* GET directors page. */
 // router.get('/', function(req, res, next) {
@@ -22,9 +22,6 @@ router.get('/', function(req, res, next) {
    res.render('new', { title: 'new' });
  });
 
-
-
-
 //SELECT
 // Render the name of the director id
 router.get('/:id', function(req, res, next) {
@@ -41,30 +38,12 @@ router.post('/', function(req, res, next) {
   });
 });
 
-
-
-
-
 //EDIT
 router.get('/:id/edit', function(req, res, next) {
   models.Director.findById(req.params.id).then(function(directors) {
     res.render('edit', { directors: directors });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 router.put('/:id', function(req, res, next) {
    models.Director.update({

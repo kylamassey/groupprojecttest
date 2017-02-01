@@ -1,29 +1,20 @@
 {
- "development": {
-   "password": null,
-   "database": "movies_app_development",
-   "host": "127.0.0.1",
-   "dialect": "postgres"
- },
- "production": {
-   "use_env_variable": "DATABASE_URL"
- }
   "development": {
-    "username": "tenzin",
+    "username": "root",
     "password": null,
-    "database": "movies_app_development",
+    "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "tenzin",
+    "username": "root",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "tenzin",
+    "username": "root",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
