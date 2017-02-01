@@ -11,8 +11,7 @@ const passport = require('passport');
 
 const index = require('./routes/index.js');
 const authRoutes = require('./routes/auth.js');
-const userRoutes = require('./routes/user.js');
-const facebookUser = require('./routes/user.js');
+const userRoutes = require('./routes/users.js');
 
 var app = express();
 require('dotenv').config();
@@ -45,7 +44,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/user', userRoutes);
 app.use('/auth', authRoutes);
 
 // catch 404 and forward to error handler
