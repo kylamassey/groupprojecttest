@@ -1,3 +1,15 @@
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+
+var index = require('./routes/index');
+var users = require('./routes/users');
+var directors = require('./routes/directors');
+
 // module dependencies
 const express = require('express');
 const path = require('path');
@@ -14,7 +26,12 @@ const authRoutes = require('./routes/auth.js');
 const userRoutes = require('./routes/users.js');
 
 var app = express();
+// override with POST having ?_method=PUT
+app.use(methodOverride('_method'));
+
+
 require('dotenv').config();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,6 +61,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', index);
+app.use('/users', users);
+app.use('/directors', directors);
 app.use('/user', userRoutes);
 app.use('/auth', authRoutes);
 

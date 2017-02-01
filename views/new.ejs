@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body class="bg">
+    <div class="container">
+    <h1>Create New Director</h1>
+    <div class="row">
+    <div class="col-md-12 spa">
+		<form action='/directors' method='POST'>
+      <label class="firstName blz"> Name</br>
+      <input type="text" name="name" class="firstName" />
+      <input type="submit" />
+		</form>
+    </div>
+  </div>
+    <a class="newzz" href="/directors">Go back to Directors page</a>
+    </div>
+  </body>
+</html>

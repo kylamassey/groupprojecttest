@@ -1,3 +1,77 @@
+$black: #000;
+$grey: #2b2b2b;
+$white: #fff;
+$red: #c13a3a;
+$darkred: #9a0000;
+.bg{
+  background-image: url(/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.dirc a{
+  background-color: $red;
+  color: $white !important;
+  padding: 10px;
+  border-bottom: solid 6px $darkred;
+  font-size: 1.4em;
+  &:hover{
+    color: $white !important;
+    text-decoration: none;
+    background-color: $darkred;
+    border-bottom: solid 6px $darkred;
+  }
+}
+.spa{
+  margin-top: 40px;
+}
+.spb{
+  margin: 20px 15px;
+  border: solid 1px $grey;
+  padding: 20px;
+  height: 90px;
+  background-color: $black;
+  &:hover{
+    background-color: $grey;
+  }
+}
+.spb a{
+  color: $white !important;
+  text-decoration: none !important;
+}
+
+.blz{
+  font-size: 1.4em;
+}
+
+.newzz{
+  font-size: 1.3em;
+  font-weight: 700;
+  border-top: solid 1px $black;
+  padding: 10px;
+  margin-top: 30px;
+  display: block;
+  width: 25%;
+  text-align: center;
+}
+.sho{
+  font-size: 6em;
+  text-align: center;
+}
+.shoz{
+  font-size: 6em;
+  background-color: $black;
+  text-align: center;
+  color: $white;
+  margin-top: 20%;
+}
+.shof{
+  font-size: 6em;
+  background-color: $black;
+  text-align: center;
+  color: $white;
+  margin-top: 10%;
 body {
   display: flex;
   min-height: 100vh;
