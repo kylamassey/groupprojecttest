@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url('http://images2.fanpop.com/image/photos/14000000/Movie-Posters-johnny-depps-movie-characters-14056947-800-600.jpg');
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+label {
+  font-size: 1.5rem;
+}
