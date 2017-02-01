@@ -15,7 +15,8 @@ router.get('/', function(req, res, next) {
 
 // creates a page that allows user to add a movie to the database
 router.get('/new', function(req, res, next) {
-  res.render('newMovie');
+  res.render('movies/new');
+  // res.send(newMovieContent);
 });
 
 router.post('/', function(req, res, next) {
