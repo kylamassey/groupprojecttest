@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome to <%= title %></h1>
+
+    <div class="">
+     <% movies.forEach(function(movies) { %>
+      <ul>
+        <li class="blz"> <a href="/movies/<%=movies.id%>"><%= movies.title %></a>
+        <form action="<%= '/movies/' + movies.id + '?_method=DELETE' %>" method="POST">
+          <input type="submit" value="Delete movie" />
+        </form>
+        </li>
+      </ul>
+       <% }) %>
+    </div>
+  </body>
+</html>
+

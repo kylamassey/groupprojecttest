@@ -8,6 +8,9 @@ var methodOverride = require('method-override');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+
+var movies = require('./routes/movies');
+
 var directors = require('./routes/directors');
 
 // module dependencies
@@ -25,12 +28,18 @@ const index = require('./routes/index.js');
 const authRoutes = require('./routes/auth.js');
 const userRoutes = require('./routes/users.js');
 
+
 var app = express();
 // override with POST having ?_method=PUT
 app.use(methodOverride('_method'));
 
 
 require('dotenv').config();
+var methodOverride=require('method-override');
+
+
+app.use(methodOverride('_method'));
+
 
 
 // view engine setup
@@ -62,9 +71,13 @@ app.use(passport.session());
 
 app.use('/', index);
 app.use('/users', users);
+
+app.use('/movies', movies);
+
 app.use('/directors', directors);
 app.use('/user', userRoutes);
 app.use('/auth', authRoutes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
