@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel='stylesheet' href='/stylesheets/style.css' />
+   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form action="/directors/<%= directors.id %>?_method=PUT" method="POST">
+        <label>
+        <div class="sho">Edit Name</div>
+        <input class="shof" type="text" name="name" value="<%= directors.name %>">
+        </label>
+        <input class="btn btn-danger" type="submit" value="Update Director">
+        </form>
+      </div>
+      <div class="col-md-12">
+        <a class="newzz" href="/directors">Go back to Directors page</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
