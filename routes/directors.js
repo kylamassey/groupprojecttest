@@ -19,11 +19,8 @@ router.get('/', function(req, res, next) {
 
  /* GET new listing. */
  router.get('/new', function(req, res, next) {
-   res.render('new', { title: 'new' });
+   res.render('newDirector', { title: 'new' });
  });
-
-
-
 
 //SELECT
 // Render the name of the director id
@@ -41,30 +38,12 @@ router.post('/', function(req, res, next) {
   });
 });
 
-
-
-
-
 //EDIT
 router.get('/:id/edit', function(req, res, next) {
   models.Director.findById(req.params.id).then(function(directors) {
     res.render('edit', { directors: directors });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 router.put('/:id', function(req, res, next) {
    models.Director.update({

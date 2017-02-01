@@ -12,9 +12,10 @@ router.get('/', function(req, res, next) {
     });
   });
 });
+
 // creates a page that allows user to add a movie to the database
 router.get('/new', function(req, res, next) {
-  res.render('new');
+  res.render('newMovie');
 });
 
 router.post('/', function(req, res, next) {
@@ -26,7 +27,6 @@ router.post('/', function(req, res, next) {
     res.redirect('/movies')
   });
 });
-
 
 // creates route to movies/id# that renders movie titles and synopsis based on whichever movie id was requested
 router.get('/:id', function(req, res, next) {
@@ -66,10 +66,5 @@ router.delete('/:id', function(req, res, next) {
     res.redirect('/movies');
   });
 });
-
-
-
-
-
 
 module.exports = router;
