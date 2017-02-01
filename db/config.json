@@ -8,4 +8,25 @@
  "production": {
    "use_env_variable": "DATABASE_URL"
  }
+  "development": {
+    "username": "tenzin",
+    "password": null,
+    "database": "movies_app_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "tenzin",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "tenzin",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
 }
