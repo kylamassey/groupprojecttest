@@ -21,6 +21,7 @@ router.post('/', function(req, res, next) {
   models.Movie.create({
     title: req.body.title,
     synopsis: req.body.synopsis,
+    id: req.body.id
   }).then(function() {
     res.redirect('/movies')
   });
@@ -47,7 +48,7 @@ router.get('/:id/edit', function(req, res, next) {
   });
 });
 
-// posts edited movie info submitted (updates) don't forget method override
+// posts edited movie info submitted (updates) don't forget method override npm install and then add to app.js
 router.put('/:id', function(req, res, next) {
   models.Movie.update({
     title: req.body.title,
@@ -55,6 +56,14 @@ router.put('/:id', function(req, res, next) {
   }, { where: { id: req.params.id } })
   .then(function() {
     res.redirect('/movies/' + req.params.id);
+  });
+});
+
+router.delete('/:id', function(req, res, next) {
+  models.Movie.destroy({
+    where: { id: req.params.id }
+  }).then(function(movie) {
+    res.redirect('/movies');
   });
 });
 
