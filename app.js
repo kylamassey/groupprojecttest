@@ -1,3 +1,4 @@
+// module dependencies
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,41 +7,24 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
+// add new modules and files here
+var session = require('express-session');
+var passport = require('passport');
+
+var auth = require('./routes/auth');
 var index = require('./routes/index');
 var users = require('./routes/users');
-
 var movies = require('./routes/movies');
-
 var directors = require('./routes/directors');
-
-// module dependencies
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-// add new modules and files here
-const session = require('express-session');
-const passport = require('passport');
-
-const index = require('./routes/index.js');
-const authRoutes = require('./routes/auth.js');
-const userRoutes = require('./routes/users.js');
-
 
 var app = express();
 // override with POST having ?_method=PUT
 app.use(methodOverride('_method'));
 
-
 require('dotenv').config();
 var methodOverride=require('method-override');
 
-
 app.use(methodOverride('_method'));
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -69,14 +53,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// set up the 5 routes from routes folder
 app.use('/', index);
-app.use('/users', users);
-
-app.use('/movies', movies);
-
+app.use('/auth', auth);
 app.use('/directors', directors);
-app.use('/user', userRoutes);
-app.use('/auth', authRoutes);
+app.use('/movies', movies);
+app.use('/user', users);
 
 
 // catch 404 and forward to error handler
