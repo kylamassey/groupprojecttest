@@ -7,7 +7,6 @@ $darkred: #9a0000;
   background-image: url(/img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .dirc a{
@@ -23,9 +22,11 @@ $darkred: #9a0000;
     border-bottom: solid 6px $darkred;
   }
 }
+
 .spa{
   margin-top: 40px;
 }
+
 .spb{
   margin: 20px 15px;
   border: solid 1px $grey;
@@ -36,6 +37,7 @@ $darkred: #9a0000;
     background-color: $grey;
   }
 }
+
 .spb a{
   color: $white !important;
   text-decoration: none !important;
@@ -72,6 +74,8 @@ $darkred: #9a0000;
   text-align: center;
   color: $white;
   margin-top: 10%;
+}
+
 body {
   display: flex;
   min-height: 100vh;
