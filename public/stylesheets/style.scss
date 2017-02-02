@@ -61,12 +61,16 @@ $darkred: #9a0000;
   font-size: 6em;
   text-align: center;
 }
-.shoz{
+.shoz, .shozMovies{
   font-size: 6em;
   background-color: $black;
   text-align: center;
   color: $white;
-  margin-top: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.shozMovies{
+  font-size: 3em;
 }
 .shof{
   font-size: 6em;
@@ -74,6 +78,10 @@ $darkred: #9a0000;
   text-align: center;
   color: $white;
   margin-top: 10%;
+}
+
+.deleteButton {
+  margin-top: 1%;
 }
 
 body {
@@ -89,4 +97,11 @@ main {
 
 label {
   font-size: 1.5rem;
+}
+
+#movieSubmit {
+  height: 5rem;
+  width: 10rem;
+  font-size: 2rem;
+  margin-top: 1%;
 }

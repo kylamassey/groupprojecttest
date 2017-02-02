@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Welcome to <%= title %></h1>
-
-    <div class="about">
-      <p> <%=synopsis %> </p>
-      <a  class="btn btn-primary" href="<%= '/movies/' + movies.id + '/edit'%>">Edit</a>
-      <form action="<%= '/movies/' + movies.id + '?_method=DELETE' %>" method="POST">
-          <input type="submit" value="Delete movie" />
-      </form>
-    </div>
-  </body>
+ <head>
+   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ </head>
+ <body class="bg">
+   <div class="container">
+     <div class="row">
+      <div class="sho"><%= title %></div>
+       <div class="col-md-12">
+         <div class="shozMovies"><%= synopsis %></div>
+         <a class="btn btn-primary" href="<%= '/movies/' + movies.id + '/edit'%>">Edit</a>
+         <div class="deleteButton">
+           <form action="<%= '/movies/' + movies.id + '?_method=DELETE' %>" method="POST">
+            <input type="submit" class="btn btn-danger" value="Delete movie" />
+           </form>
+         </div>
+       </div>
+       <div class="col-md-12">
+         <a class="newzz" href="/movies">Go back to Movies page</a>
+       </div>
+     </div>
+   </div>
+ </body>
 </html>
-
