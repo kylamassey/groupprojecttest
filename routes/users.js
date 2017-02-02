@@ -14,4 +14,9 @@ router.get('/', authHelpers.loginRequired, (req, res, next) => {
   });
 });
 
+// redirected here after registeration
+router.get('/registered', (req, res, next) => {
+  res.render('user/registrationComplete');
+});
+
 module.exports = router;

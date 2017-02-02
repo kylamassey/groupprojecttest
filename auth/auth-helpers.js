@@ -32,7 +32,7 @@ function createUser(req, res) {
     email: req.body.email,
     dob: req.body.dob
   }).then(() => {
-    res.redirect('/');
+    res.redirect('/user/registered');
   });
 }
 
